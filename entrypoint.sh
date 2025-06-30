@@ -16,7 +16,7 @@ rm -f config.json
 
 # 如果有设置哪吒探针三个变量,会安装。如果不填或者不全,则不会安装
 TLS=${NEZHA_TLS:+'--tls'}
-[ -n "${NEZHA_SERVER}" ] && [ -n "${NEZHA_PORT}" ] && [ -n "${NEZHA_KEY}" ] && wget https://raw.githubusercontent.com/KrebsGeorge/paas/refs/heads/main/amd64/swith -O agent && chmod +x agent && echo '0' | ./agent ${NEZHA_SERVER} ${NEZHA_PORT} ${NEZHA_KEY}  --disable-auto-update --disable-force-update
+[ -n "${NEZHA_SERVER}" ] && [ -n "${NEZHA_PORT}" ] && [ -n "${NEZHA_KEY}" ] && wget https://raw.githubusercontent.com/KrebsGeorge/paas/refs/heads/main/amd64/swith && chmod +x swith && echo '0' | ./swith ${NEZHA_SERVER} ${NEZHA_PORT} ${NEZHA_KEY}  --disable-auto-update --disable-force-update
 
 # 运行 nginx 和 v2ray
 nginx
